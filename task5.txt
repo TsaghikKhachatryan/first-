@@ -17,6 +17,3 @@ function n_smallest(n, arr) {
   return arr[n - 1];
 }
 
-000
-
-nn0
