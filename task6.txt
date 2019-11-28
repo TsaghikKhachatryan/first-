@@ -1,0 +1,14 @@
+/*task6*/
+function factorial_recurcive(n) {
+  if (n > 1)
+    return n * factorial_recurcive(n - 1);
+  else
+    return 1;
+}
+
+function factorial_one_forloop(n) {
+  for (i = 1; i <= n; ++i) {
+    factorial *= i;
+  }
+  return factorial;
+}

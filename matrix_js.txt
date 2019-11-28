@@ -1,0 +1,20 @@
+/*matrix task*/
+
+let arr=[
+[5,9,7,8,6],
+[7,8,9,4,8],
+[7,4,5,1,2],
+[5,8,9,6,3],
+[8,8,4,5,6]
+];
+let func=()=>{
+let sum=0;
+for(let i=0;i<arr.length;++i){
+  for(let j=0;j<arr[0].length-i;++j){
+    sum=sum+(arr[i][j]) ;
+  }
+}
+return sum;
+}
+func();
+console.log(func());

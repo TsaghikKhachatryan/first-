@@ -1,0 +1,25 @@
+/*task2*/ 
+
+ var o = {
+    name: "o_name ",
+    width: 78,
+    height: 155,
+    weight: 88,
+    age: 18,
+    address: "p_address",
+    number: 45
+  }
+  var p = {
+    name: "p_name",
+    height: 165,
+    number: 55
+  }
+
+  function restrict(o, p) {
+    for (var key in o) {
+      if (!(key in p)) {
+        delete o[key];
+      }
+    }
+    return o;
+  }

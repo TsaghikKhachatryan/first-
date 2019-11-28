@@ -1,0 +1,80 @@
+/*task4*/
+/*solution 1*/
+
+var real_string = "Hello world";
+
+reverse(real_string);
+console.log(real_string);
+
+function reverse(s) {
+  var copy_s = s;
+  var past_space_index = -1;
+  var j = -1;
+  for (var i = 0; i <= s.length; ++i) {
+    if (i == s.length || s[i] == " ") {
+      j = i;
+      var temp = i-1;
+      while (temp > past_space_index) {
+        copy_s += s[temp--];
+      }
+      if (i != length - 1) {
+        copy_s += " "
+      }
+      past_space_index = j;
+
+    }
+  }
+  s = copy_s;
+}
+
+/*second solution*/
+
+var str = "Hello World";
+str = sentence_reversor(str);
+console.log(str);
+
+function sentence_reversor(s) {
+  var splited_s = string_spliter(s);
+
+  for (var key in splited_s) {
+    splited_s[key] = string_reversor(splited_s[key]);
+  }
+  return string_combiner(splited_s);
+}
+
+function string_spliter(s) {
+  var arr = [];
+  var temp_splited = "";
+  for (var i = 0; i < s.length; ++i) {
+    if (i == s.length - 1) {
+      temp_splited += s[i];
+      arr.push(temp_splited);
+      return arr;
+    } else if (s[i] == " ") {
+      arr.push(temp_splited);
+      temp_splited = "";
+    } else {
+      temp_splited += s[i];
+    }
+  }
+  return arr;
+}
+
+function string_reversor(s) {
+  var str = "";
+  for (var i = s.length - 1; i >= 0; --i) {
+    str += s[i];
+  }
+  return str;
+}
+
+function string_combiner(arr) {
+  var s = "";
+  for (var i = 0; i < arr.length; ++i) {
+    s += arr[i];
+    if (i != arr.length - 1) {
+      s += " ";
+    }
+  }
+  return s;
+}

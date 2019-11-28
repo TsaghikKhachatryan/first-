@@ -1,0 +1,7 @@
+/*task3*/
+function returnTrue(a, b, c, d) {
+
+  return (a == b && b == c && a != c && d !== d)
+}
+
+console.log(returnTrue('',0,'0',NaN));

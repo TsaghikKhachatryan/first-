@@ -1,0 +1,38 @@
+/*implementing stack*/
+
+class Stack {
+  constructor() {
+    this.elements = [];
+    this.elem_count = 0;
+  }
+  push(item) {
+    this.elements[this.elem_count] = item;
+    ++this.elem_count;
+  }
+  pop() {
+    if (this.elem_count === 0)
+      return "underflow";
+    else {
+      let poped_elem = this.elements[this.elem_count];
+      --this.elem_count;
+      delete this.elements[this.elem_count];
+      return poped_elem;
+    }
+  }
+  peek() {
+    if (this.elem_count === 0)
+      return "underflow";
+    else
+      return this.elements[this.elem_count - 1];
+  }
+  reverse() {
+    let reverced_arr = [];
+    for (let i = 0; i < this.elem_count; ++i) {
+      reverced_arr[i] = this.elements[this.elem_count - i - 1];
+    }
+    this.elements = reverced_arr;
+  }
+  empty() {
+    return this.elem_count === 0;
+  }
+}

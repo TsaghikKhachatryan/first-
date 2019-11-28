@@ -1,0 +1,22 @@
+/*task1*/
+
+var o = {
+  name: "o_name",
+  height: 165
+
+}
+var p = {
+  name: "p_name",
+  height: 155,
+  age: 18,
+  address: "p_address"
+}
+
+function extend(o, p) {
+  for (var key in p) {
+    if (!(key in o)) {
+      o[key] = p[key];
+    }
+  }
+  return o;
+}
