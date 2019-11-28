@@ -16,3 +16,5 @@ function n_smallest(n, arr) {
   bubble_sort(arr);
   return arr[n - 1];
 }
+
+0000

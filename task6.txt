@@ -1,9 +1,11 @@
 /*task6*/
 function factorial_recurcive(n) {
-  if (n > 1)
+  if (n > 1){
     return n * factorial_recurcive(n - 1);
-  else
+}
+  else{
     return 1;
+}
 }
 
 function factorial_one_forloop(n) {
@@ -12,3 +14,5 @@ function factorial_one_forloop(n) {
   }
   return factorial;
 }
+
+++
